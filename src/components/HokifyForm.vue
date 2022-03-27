@@ -150,7 +150,7 @@ button {
     width: 70%;
   }
 }
-  @media (max-width: 520px) {
+  @media (max-width: 700px) {
   form{
     width: 90%;
   }

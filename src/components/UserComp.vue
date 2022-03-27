@@ -121,5 +121,9 @@ button{
     
     display: none;
   }
+  .head{
+    display: block;
+    text-align: center;
+  }
 }
 </style>

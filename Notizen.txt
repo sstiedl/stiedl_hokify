@@ -1,0 +1,59 @@
+Setup:
+-Zunächst ein VUE3 Projekt erstellt, Babel, Linter, Router, Typescript und Vuex aktiviert
+-Projekt gesäubert: AboutView, HelloWorld-Components, Logo und router '/about' Pfad gelöscht
+
+Step 1:
+- Component namens „HokifyForm" erstellt
+- Component in HomeView Importiert
+- In HokifyForm eine neue Form inkl. Button erstellt
+- Styling der Form erstellt
+- Setup() erstellt, ref importiert und Variablen erstellt
+- handleSubmit function erstellt in der die eingegeben Daten als Objekt gelogged werden
+- Ein click-event erstellt und sich gewundert warum bei jedem click die handleSubmit function gefeuert wird
+- Click-event in ein submit-event geändert und mit console.log den input geprüft, funktioniert
+- Neue Toast component erstellt und gestyled
+- Toast in HokifyForm importiert
+- showToast variable erstellt, damit Toast nicht immer sichtbar ist
+- Transition für die Animation von Toast erstellt
+- Gegen toast-animation entschieden, stattdessen fade-slide-in
+
+Step 2:
+- State: user erstellt
+- Mutation: setUser erstellt
+- Action: addUser erstellt
+- Store in HokifyForm importiert
+- useRouter für einen push zu einem anderen View importiert
+- handleSubmit function adaptiert, Objekt gelöscht, stattdessen dispatch der Eingabedaten
+- Test mit console.log(store.sate.user), funktioniert
+- Erstellen von „UserView“
+- Route hinzugefügt
+- In handleSubmit push zur neuen View
+- Neue compontent „UserComponent“ für „UserView“ erstellt und importiert
+- useStore und useRouter importiert
+- Eingabedaten anzeigen lassen
+- Alles gestyled
+- Löschen Button erstellt
+- vuex persitedstate installiert und importiert damit nach refresh daten erhalten bleiben
+- handleDelete function erstellt 
+- deleteUser action erstellt in in handleDelete implementiert
+- Alles mehrere Male getestet, funktioniert
+
+Step 3:
+- Navbar component erstellt
+- In App.vue Importiert
+- Vuex dark-state und toggle mutation erstellt
+- Slider Button erstellt
+- Toggle mutation getestet
+-> Toggle funktioniert nicht jedes Mal wird von false auf true getoggelt und dann sofort wieder auf false
+	-> Ca. 1 bis 2 Stunden den Fehler gesucht, wo keiner sein sollte, da einfach nur getoggelt wird
+	-> Erkannt der Slider Button das Problem war
+	-> Ganz normalen Button erstellt, ein schönerer Button wird auf später verschoben
+- Toggle funktioniert endlich
+- Mit Tailwind beschäftigt, da ich den dark-mode mit Tailwind machen möchte
+- Zwei Themes erstellt
+- Toggle der Themes funktioniert
+- Zweiter Versuch eines Sliders(hoffentlich funktioniert es diesmal besser)
+- Einen sehr simplen Button erstellt
+- Responsivness sichergestellt
+- Letzten tweaks
+- Alles nochmal getestet

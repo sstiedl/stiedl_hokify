@@ -1,15 +1,23 @@
 <template>
   <div class="toast-wrapper">
     <div class="toast text-white bg-teal-500  dark:text-stone-200 dark:bg-gray-800">
-      Hello at hokify
+      Hello {{ user.fName }} {{ user.lName }} at hokify
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
+import { useStore } from "vuex";
+
 
 export default defineComponent({
+  setup(){
+    const store = useStore();
+    const user = computed(() => store.state.user);
+
+    return{ user }
+  }
 })
 </script>
 
